@@ -37,6 +37,6 @@ jobs:
               run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
               
             - name: Push Docker image to DockerHub
-              run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-app:${{ github.sha }}
+              run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/app01:$GIT_HASH
             
       
